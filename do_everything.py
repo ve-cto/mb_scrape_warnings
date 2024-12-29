@@ -84,7 +84,12 @@ def run_kicks():
     # Create and write to the CSV file
     with open("entire_summary.csv", "w", newline='') as csvfile:
         csv_writer = csv.writer(csvfile)
-        
+
+        csv_writer.writerow(["Program created by kenobi_luke (Vecto__), 2024. This document adheres to the CC-BY-NC-ND copyright licence. Unauthorised sharing of this program is not allowed."])
+        csv_writer.writerow(["The use of this document for explicit malicious intent is not allowed."])
+        csv_writer.writerow("")
+        csv_writer.writerow("")
+
         # Write the tally of kicks given and received
         csv_writer.writerow(["Player", "Number of kicks given", "Number of kicks received"])
         for player in set(kicks_given.keys()).union(set(kicks_received.keys())):
